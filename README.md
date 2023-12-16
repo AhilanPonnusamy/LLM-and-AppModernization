@@ -59,8 +59,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 ```
 >[!NOTE]
 >During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also light theme for UI, you can change in under setting in the top right corner.
-
-![App UI](./images/LLMUI.jpg)    
+>![App UI](./images/LLMUI.jpg)    
 
 **Testing**
 
@@ -72,3 +71,6 @@ Now, that the application and the backend services are up and running, it is now
 2. With **Use RAG** option selected, submit the same question **can you transfer $50 to joseph?** you will now see a more context aware message as shown below
 ![App UI](./images/WithRAG.jpg)    
 
+>[!WARNING]
+>You may periodically face the following context window size error. Clik on the clear conversation button on the left side to flush the data and try again.
+ 
