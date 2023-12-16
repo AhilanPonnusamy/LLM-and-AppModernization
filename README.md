@@ -12,7 +12,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 **Prerequisites**
 
-1. Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
+1.  Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
    
   ```
       brew install python
@@ -26,7 +26,13 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 3. Download this code repository (install git if it is not already setup, You can also downlod the zip file directly from the main page under code option as an alternate)
 
-   ```
+```
       brew install git
       git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
-  ```
+```
+
+4. Move to LLM-and-AppModernization folder
+
+```
+      cd LLM-and-AppModernization
+```
