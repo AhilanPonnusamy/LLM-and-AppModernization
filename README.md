@@ -53,8 +53,11 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 ```
       python3 restservice.py
 ```
-10. Open a new terminal window and from the LLM-and-AppModernization folder start the LLM applicatioin
+10. Open a new terminal window and from the LLM-and-AppModernization folder start the LLM application. It will open the UI in a new browser tab.
 ```
      streamlit run app.py
 ```
-    
+>[!NOTE]
+>During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem.
+
+![App UI](./images/LLMUI.jpg)    
