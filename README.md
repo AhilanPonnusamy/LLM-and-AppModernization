@@ -36,3 +36,11 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 ```
       cd LLM-and-AppModernization
 ```
+
+5. Install all required packages from requirements.txt file
+```
+      python3 -m pip install -r requirements.txt
+```
+
+6. Create a new folder named 'models'
+7. From models folder download download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**, You can use wget or directly download the file from huggingface. 
