@@ -74,3 +74,13 @@ Now, that the application and the backend services are up and running, it is now
 >[!WARNING]
 >You may periodically face the following context window size error. Clik on the clear conversation button on the left side to flush the data and try again.
  
+3. you can try the following prompts to try with **Use RAG** option selected
+     - can you transfer $50 to ram?
+     - can you transfer $580 to john?
+     - can you transfer $100 to peter?
+     - can you add joseph to my account?
+     - can you add allan to my account?
+     - can you remove john from my account?
+     - can you remove mark from my account?
+   
+***Have fun!!!!!***
