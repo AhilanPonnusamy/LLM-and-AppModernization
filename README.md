@@ -28,5 +28,5 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
    ```
       brew install git
-      git clone 
+      git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
   ```
