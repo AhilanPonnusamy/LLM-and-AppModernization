@@ -11,7 +11,7 @@ The following is the sysem specification that I used for building this project, 
 
 Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine,.
 
-##Prerequisites##
+## Prerequisites
 
 1.  Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
    
@@ -61,7 +61,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 >During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also light theme for UI, you can change in under setting in the top right corner.
 >![App UI](./images/LLMUI.jpg)    
 
-##Testing##
+## Testing
 
 Now, that the application and the backend services are up and running, it is now time to take it for a spin
 
