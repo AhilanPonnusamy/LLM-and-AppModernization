@@ -15,7 +15,12 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 1. Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
    
   ```
-   brew install python
+      brew install python
    ```
 
-3. 
+2. upgrade pip3 to the latest version (pip3 enables the installation and management of third party software packages that are used in this project)
+
+  ```
+      python3 -m pip install --upgrade pip
+  ```
+     
