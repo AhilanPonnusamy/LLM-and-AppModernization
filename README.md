@@ -58,7 +58,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
      streamlit run app.py
 ```
 >[!NOTE]
->During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem.
+>During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also light theme for UI, you can change in under setting in the top right corner.
 
 ![App UI](./images/LLMUI.jpg)    
 
@@ -66,4 +66,9 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 Now, that the application and the backend services are up and running, it is now time to take it for a spin
 
-1. With **Use RAG** option unselected, submit the following question **can you transfer $50 to joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI.  
+1. With **Use RAG** option unselected, submit the following question **can you transfer $50 to joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI as shown below.
+![App UI](./images/WithoutRAG.jpg)
+
+2. With **Use RAG** option selected, submit the same question **can you transfer $50 to joseph?** you will now see a more context aware message as shown below
+![App UI](./images/WithRAG.jpg)    
+
