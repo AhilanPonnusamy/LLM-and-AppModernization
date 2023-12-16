@@ -1,7 +1,7 @@
 # LLM-and-AppModerization
 
 This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well. 
-The following is the sysem specification that I used for building this project, I do believe even a lower configuration might work just fine.
+The following is the sysem specification that I used for building this project, I do believe a lower configuration will work just fine.
 
 **System Specifications:**
 
@@ -61,3 +61,9 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 >During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem.
 
 ![App UI](./images/LLMUI.jpg)    
+
+**Testing**
+
+Now, that the application and the backend services are up and running, it is now time to take it for a spin
+
+1. With **Use RAG** option unselected, submit the following question **can you transfer $50 to joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI.  
