@@ -1,6 +1,7 @@
 # LLM-and-AppModerization
 
-This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well.
+This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well. 
+The following is the sysem specification that I used for building this project, I do believe even a lower configuration might work just fine.
 
 **System Specifications:**
 
