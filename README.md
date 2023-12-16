@@ -23,4 +23,10 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
   ```
       python3 -m pip install --upgrade pip
   ```
-     
+
+3. Download this code repository (install git if it is not already setup, You can also downlod the zip file directly from the main page under code option as an alternate)
+
+   ```
+      brew install git
+      git clone 
+  ```
