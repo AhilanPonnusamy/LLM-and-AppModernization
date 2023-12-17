@@ -58,7 +58,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
      streamlit run app.py
 ```
 >[!NOTE]
->During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also light theme for UI, you can change in under setting in the top right corner.
+>During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also get light theme for UI as default, you can change in under setting in the top right corner.
 >![App UI](./images/LLMUI.jpg)    
 
 ## Testing
