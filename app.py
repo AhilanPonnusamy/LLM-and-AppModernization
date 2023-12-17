@@ -55,7 +55,7 @@ def select_llm() -> Union[ChatOpenAI, LlamaCpp]:
 
     
     # I am going to leave the temperature above mid range for better creativity - Removed slider - Ahilan 12/12
-    temperature =0.70 
+    temperature=0.0 # settting it to zero to get concerete answers with less maninupulation - Ahilan 12/17
     #temperature = st.sidebar.slider("Temperature:", min_value=0.0,
     #                                max_value=1.0, value=0.0, step=0.01)
 
