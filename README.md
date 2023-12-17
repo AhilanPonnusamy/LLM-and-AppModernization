@@ -1,5 +1,7 @@
 # LLM-and-AppModerization
 
+## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87) ##
+
 This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well. 
 The following is the sysem specification that I used for building this project, I do believe a lower configuration will work just fine.
 
@@ -9,7 +11,7 @@ The following is the sysem specification that I used for building this project, 
 - Processor: 2.6 GHz 6-Core Intel Core i7
 - RAM: 32 GB 2667 MHz DDR4
 
-Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine,.
+Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine.
 
 ## Prerequisites
 
