@@ -16,7 +16,7 @@ This exercise is the extension on the XBC Bank POC that we discussed earlier. In
 
 Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine.
 
-## Fine tuning the Llama2 chat model in Google Colab with XBC bank training data
+## STEP 1: Fine tuning the Llama2 chat model in Google Colab with XBC bank training data
 
 1. I used Google Colab (https://colab.research.google.com/?utm_source=scs-index) for this task. While the free version might work sometimes, it can be slow, or you might get timed out because of limited resources. I strongly suggest either getting compute units under the **Pay As You Go** model or subscribing to Colab Pro. For this task, I bought 100 Pay As You Go compute units. Even after all the testing, I only used 18 compute units, which cost around $2 USD.
 
@@ -46,6 +46,23 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
    ![Colab UI](../images/colab-buildmodel.png) 
 
 9. **[Optional]** Run Cell 9 to push the Fine tuned model to your Hugging Face Repository. You will need a write access token fort this. Create a write Access Token under profile if you do not have one.
+
+## STEP 2: Building GGUF file for local execution 
+
+In this section, we will build GGUF format for the fine tuned Llama2 chat model created in STEP 1.
+
+1.  In a new terminal, Install huggingface_hub library
    
+  ```
+     pip install huggingface_hub
+   ```
+
+2. Fetch the HuggingFace model we created in STEP1
+
+   '''
+   model_id="AhilanPonnusamy/llama-2-7b-xbcfinetuned"
+   snapshot_download(repo_id=model_id, local_dir="myllama-hf",
+                  local_dir_use_symlinks=False, revision="main")
+   '''
 ***Have fun!!!!!***
 
