@@ -32,13 +32,15 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 >[!WARNING]
 >DO NOT RUN ALL THE CELLS AT THE SAME TIME, DOING SO MIGHT THROW OUT OF MEMORY ERROR LATER IN THE SCRIPT.
 
-7. Create a new folder named 'models'
+7. After executing Cell 7 to clear the VRAM, please restart the runtime by selecting **Runtime->Restart Session** option. This will help to ensure the memory is flushed and is ready for building the combined model in the next step.
+   ![Colab UI](../images/colab-clearRAM.png)
+
    
-8. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
+9. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
 
-9. Move back to LLM-and-AppModernization folder
+10. Move back to LLM-and-AppModernization folder
 
-10. Start the backend business services
+11. Start the backend business services
 ```
       python3 restservice.py
 ```
