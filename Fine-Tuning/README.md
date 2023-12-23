@@ -25,22 +25,20 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 4. Download **train.csv** file from this folder(Fine-Tuning Folder) and upload it to **Colab->data** folder that you just created by selecting **Upload** option on right click as shown below.
    ![Colab UI](../images/colab-trainingfile.png)
 
-```
-      cd LLM-and-AppModernization
-```
 
-5. Install all required packages from requirements.txt file
-```
-      python3 -m pip install -r requirements.txt
-```
+5. You are all set to execute the Fine tuning script now. Execute one cell at a time by clicking on the Run button as shown below
+   ![Colab UI](../images/Colab-runscript.png)
 
-6. Create a new folder named 'models'
+>[!WARNING]
+>DO NOT RUN ALL THE CELLS AT THE SAME TIME, DOING SO MIGHT THROW OUT OF MEMORY ERROR LATER IN THE SCRIPT.
+
+7. Create a new folder named 'models'
    
-7. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
+8. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
 
-8. Move back to LLM-and-AppModernization folder
+9. Move back to LLM-and-AppModernization folder
 
-9. Start the backend business services
+10. Start the backend business services
 ```
       python3 restservice.py
 ```
