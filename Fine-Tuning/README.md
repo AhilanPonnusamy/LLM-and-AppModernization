@@ -13,7 +13,7 @@ The following is the sysem specification that I used for building this project, 
 
 Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine.
 
-## Prerequisites
+## Fine tuning the Llama2 chat model in Google Colab with XBC bank training data
 
 1. I used Google Colab (https://colab.research.google.com/?utm_source=scs-index) for this task. While the free version might work sometimes, it can be slow, or you might get timed out because of limited resources. I strongly suggest either getting compute units under the **Pay As You Go** model or subscribing to Colab Pro. For this task, I bought 100 Pay As You Go compute units. Even after all the testing, I only used 18 compute units, which cost around $2 USD.
 
@@ -29,14 +29,19 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 5. You are all set to execute the Fine tuning script now. Execute one cell at a time by clicking on the Run button as shown below
    ![Colab UI](../images/Colab-runscript.png)
 
->[!WARNING]
->DO NOT RUN ALL THE CELLS AT THE SAME TIME, DOING SO MIGHT THROW OUT OF MEMORY ERROR LATER IN THE SCRIPT.
+ >[!WARNING]
+ >DO NOT RUN ALL THE CELLS AT THE SAME TIME, DOING SO MIGHT THROW OUT OF MEMORY ERROR LATER IN THE SCRIPT.
 
-7. After executing Cell 7 to clear the VRAM, please restart the runtime by selecting **Runtime->Restart Session** option. This will help to ensure the memory is flushed and is ready for building the combined model in the next step.
+6. After executing Cell 7 to clear the VRAM, please restart the runtime by selecting **Runtime->Restart Session** option. This will help to ensure the memory is flushed and is ready for building the combined model in the next two steps.
    ![Colab UI](../images/colab-clearRAM.png)
 
+7. **Re-execute the first three cells again to setup the environment**. 
+ >[!NOTE]
+ >Execute only the first 3 cells. Executing beyond that is not required.
    
-9. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
+8. Execute Cell 8 to reload and merge the model.
+   ![Colab UI](../images/colab-buildmodel.png)
+   
 
 10. Move back to LLM-and-AppModernization folder
 
