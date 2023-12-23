@@ -21,9 +21,9 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 3. Create a folder called **data** by selecting the "New Folder" option on right click as shown below.
    ![Colab UI](../images/colab.png)
-```
 
-4. Move to LLM-and-AppModernization folder
+4. Download **train.csv** file from this folder(Fine-Tuning Folder) and upload it to **Colab->data** folder that you just created by selecting **Upload** option on right click as shown below.
+   ![Colab UI](../images/colab-trainingfile.png)
 
 ```
       cd LLM-and-AppModernization
