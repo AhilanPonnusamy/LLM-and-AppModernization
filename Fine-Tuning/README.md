@@ -57,7 +57,7 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
      pip install huggingface_hub
 ```
 
-2. Fetch the HuggingFace model we created in STEP1
+2. Fetch the HuggingFace model we stored in your Hugging Face account in STEP1
 
 ```
    from huggingface_hub snapshot_download
@@ -66,5 +66,8 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
    snapshot_download(repo_id=model_id, local_dir="XBCllama-hf",
                   local_dir_use_symlinks=False, revision="main")
 ```
+
+ >[!NOTE]
+ >Replace the model_id with your Hugging Face repository details. If you use your repository you will not have the tokenizer.model file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the base model repository **NousResearch/Llama-2-7b-chat-hf**
 ***Have fun!!!!!***
 
