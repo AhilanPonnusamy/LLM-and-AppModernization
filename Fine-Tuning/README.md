@@ -59,10 +59,12 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 
 2. Fetch the HuggingFace model we created in STEP1
 
-   '''
-   model_id="AhilanPonnusamy/llama-2-7b-xbcfinetuned"
-   snapshot_download(repo_id=model_id, local_dir="myllama-hf",
-                  local_dir_use_symlinks=False, revision="main")
-   '''
+   ```
+   from huggingface_hub snapshot_download
+   
+   model_id=\"AhilanPonnusamy/llama-2-7b-xbcfinetuned\"
+   snapshot_download(repo_id=model_id, local_dir=\"XBCllama-hf\",
+                  local_dir_use_symlinks=False, revision=\"main\")
+    ```
 ***Have fun!!!!!***
 
