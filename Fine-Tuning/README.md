@@ -15,11 +15,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 ## Prerequisites
 
-1.  Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
-   
-  ```
-      brew install python
-   ```
+1. I used Google Colab (https://colab.research.google.com/?utm_source=scs-index) for this task. While the free version might work sometimes, it can be slow, or you might get timed out because of limited resources. I strongly suggest either getting compute units under the **Pay As You Go** model or subscribing to Colab Pro. For this task, I bought 100 Pay As You Go compute units. Even after all the testing, I only used 18 compute units, which cost around $2 USD.
 
 2. upgrade pip3 to the latest version (pip3 enables the installation and management of third party software packages that are used in this project)
 
