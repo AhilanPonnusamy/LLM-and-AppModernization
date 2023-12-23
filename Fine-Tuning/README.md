@@ -69,7 +69,28 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 
  >[!NOTE]
  >If desired, replace the **model_id** with your Hugging Face repository details. If you use your repository you will not have the **tokenizer.model** file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the 
- >base model repository **NousResearch/Llama-2-7b-chat-hf**
+ >base model repository **NousResearch/Llama-2-7b-chat-hf**. Make sure tokenizer.model file is available in your Hugging Face repository before moving to the next step.
 
+3. Install llama.cpp if it is not done already
+
+```
+  $ git clone https://github.com/ggerganov/llama.cpp.git
+
+  $ pip install -r llama.cpp/requirements.txt
+```
+
+4. Execute the converion script to build the GGUF model
+
+```
+  $ python llama.cpp/convert.py XBCllama-hf \
+    --outfile llama-2-7b-xbcfinetuned-q8_0-gguf \
+    --outtype q8_0
+```
+
+5. Test the model from llama.cpp folder
+
+```
+ ./main -m ../llama-2-7b-xbcfinetuned-q8_0-gguf --color -ins -n -1
+```
 ***Have fun!!!!!***
 
