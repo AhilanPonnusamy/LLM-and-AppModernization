@@ -92,5 +92,7 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 ```
  ./main -m ../llama-2-7b-xbcfinetuned-q8_0-gguf --color -ins -n -1
 ```
+![Colab UI](../images/finetuned-chat.jpg) 
+
 ***Have fun!!!!!***
 
