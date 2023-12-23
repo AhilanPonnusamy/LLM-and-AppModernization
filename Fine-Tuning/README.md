@@ -40,44 +40,9 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
  >Execute only the first 3 cells. Executing beyond that is not required.
    
 8. Execute Cell 8 to reload and merge the model.
-   ![Colab UI](../images/colab-buildmodel.png)
-   
+   ![Colab UI](../images/colab-buildmodel.png) 
 
-10. Move back to LLM-and-AppModernization folder
-
-11. Start the backend business services
-```
-      python3 restservice.py
-```
-10. Open a new terminal window and from the LLM-and-AppModernization folder start the LLM application. It will open the UI in a new browser tab.
-```
-     streamlit run app.py
-```
->[!NOTE]
->During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also get light theme for UI as default, you can change in under setting in the top right corner.
->![App UI](./images/LLMUI.jpg)    
-
-## Testing
-
-Now, that the application and the backend services are up and running, it is now time to take it for a spin
-
-1. With **Use RAG** option unselected, submit the following question **can you transfer $50 to joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI as shown below.
-![App UI](./images/WithoutRAG.jpg)
-
-2. With **Use RAG** option selected, submit the same question **can you transfer $50 to joseph?** you will now see a more context aware message as shown below
-![App UI](./images/WithRAG.jpg)    
-
->[!WARNING]
->You may periodically face the following context window size error. Clik on the clear conversation button on the left side to flush the data and try again.
- 
-3. you can try the following prompts to try with **Use RAG** option selected
-     - can you transfer $50 to ram?
-     - can you transfer $580 to john?
-     - can you transfer $100 to peter?
-     - can you add joseph to my account?
-     - can you add allan to my account?
-     - can you remove john from my account?
-     - can you remove mark from my account?
+9. **[Optional]** Run Cell 9 to push the Fine tuned model to your Hugging Face Repository. You will need a write access token fort this. Create a write Access Token under profile if you do not have one.
    
 ***Have fun!!!!!***
 
