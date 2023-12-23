@@ -20,7 +20,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 2. Open **Fine-Tuning/XBC_Fine_tune_Llama_2_in_Google_Colab.ipynb**. Right click on **Open in Colab** button on the top left corner. and open it in a new tab. It will open the the script in Google Colab. 
 
 3. Create a folder called **data** by selecting the "New Folder" option on right click as shown below.
-   ![Colab UI](./images/colab.png)
+   ![Colab UI](../images/colab.png)
 ```
 
 4. Move to LLM-and-AppModernization folder
