@@ -17,17 +17,10 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 1. I used Google Colab (https://colab.research.google.com/?utm_source=scs-index) for this task. While the free version might work sometimes, it can be slow, or you might get timed out because of limited resources. I strongly suggest either getting compute units under the **Pay As You Go** model or subscribing to Colab Pro. For this task, I bought 100 Pay As You Go compute units. Even after all the testing, I only used 18 compute units, which cost around $2 USD.
 
-2. upgrade pip3 to the latest version (pip3 enables the installation and management of third party software packages that are used in this project)
+2. Open **Fine-Tuning/XBC_Fine_tune_Llama_2_in_Google_Colab.ipynb**. Right click on **Open in Colab** button on the top left corner. and open it in a new tab. It will open the the script in Google Colab. 
 
-  ```
-      python3 -m pip install --upgrade pip
-  ```
-
-3. Download this code repository (install git if it is not already setup, You can also downlod the zip file directly from the main page under code option as an alternate)
-
-```
-      brew install git
-      git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
+3. Create a folder called **data** by selecting the "New Folder" option on right click as shown below.
+   ![Colab UI](./images/colab.png)
 ```
 
 4. Move to LLM-and-AppModernization folder
