@@ -19,7 +19,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 2. Open **Fine-Tuning/XBC_Fine_tune_Llama_2_in_Google_Colab.ipynb**. Right click on **Open in Colab** button on the top left corner. and open it in a new tab. It will open the the script in Google Colab. 
 
-3. Create a folder called **data** by selecting the "New Folder" option on right click as shown below.
+3. Create a folder called **data** by selecting the "New Folder" option on right click in folder tab as shown below.
    ![Colab UI](../images/colab.png)
 
 4. Download **train.csv** file from this folder(Fine-Tuning Folder) and upload it to **Colab->data** folder that you just created by selecting **Upload** option on right click as shown below.
