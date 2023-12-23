@@ -1,4 +1,4 @@
-# LLM-and-AppModerization
+# LLM-and-AppModerization - Fine Tuning
 
 ## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87) ##
 
