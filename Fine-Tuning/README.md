@@ -2,10 +2,13 @@
 
 ## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87) ##
 
-This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well. 
-The following is the sysem specification that I used for building this project, I do believe a lower configuration will work just fine.
+This exercise is the extension on the XBC Bank POC that we discussed earlier. In this exercise we will achieve the following
 
-**System Specifications:**
+1. Use training data that is created for the XBC Bank usecase
+2. Fine tune the base **Llama-2-70b-chat-hf** model with the training data in Google Colab 
+3. Upload the fine tuned model to your Hugging Face repository
+   
+**System Specifications: (Same as the previous exercise)**
 
 - Device: MacBook Pro
 - Processor: 2.6 GHz 6-Core Intel Core i7
