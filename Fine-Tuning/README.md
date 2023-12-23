@@ -53,9 +53,9 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 
 1.  In a new terminal, Install huggingface_hub library
    
-  ```
-     pip install huggingface_hub
    ```
+     pip install huggingface_hub
+    ```
 
 2. Fetch the HuggingFace model we created in STEP1
 
