@@ -68,6 +68,8 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 ```
 
  >[!NOTE]
- >If desired, replace the **model_id** with your Hugging Face repository details. If you use your repository you will not have the tokenizer.model file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the base model repository **NousResearch/Llama-2-7b-chat-hf**
+ >If desired, replace the **model_id** with your Hugging Face repository details. If you use your repository you will not have the **tokenizer.model** file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the 
+ >base model repository **NousResearch/Llama-2-7b-chat-hf**
+
 ***Have fun!!!!!***
 
