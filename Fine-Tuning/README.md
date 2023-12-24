@@ -18,6 +18,9 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 ## STEP 1: Fine tuning the Llama2 chat model in Google Colab with XBC bank training data
 
+ >[!NOTE]
+ >If you do not want to do the fine tuning step, you can download the fine tuned model directly from my Hugging Face repository as explained in STEP 2.
+
 1. I used Google Colab (https://colab.research.google.com/?utm_source=scs-index) for this task. While the free version might work sometimes, it can be slow, or you might get timed out because of limited resources. I strongly suggest either getting compute units under the **Pay As You Go** model or subscribing to Colab Pro. For this task, I bought 100 Pay As You Go compute units. Even after all the testing, I only used 18 compute units, which cost around $2 USD.
 
 2. Open **Fine-Tuning/XBC_Fine_tune_Llama_2_in_Google_Colab.ipynb**. Right click on **Open in Colab** button on the top left corner. and open it in a new tab. It will open the the script in Google Colab. 
