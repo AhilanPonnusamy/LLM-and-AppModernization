@@ -1,11 +1,11 @@
 # LLM-and-AppModerization - Fine Tuning
 
-## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87) ##
+## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-iii-fine-tuning-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-74fb748d894b) ##
 
 This exercise is the extension on the XBC Bank POC that we discussed earlier. In this exercise we will achieve the following
 
 1. Use training data that is created for the XBC Bank usecase
-2. Fine tune the base **Llama-2-70b-chat-hf** model with the training data in Google Colab 
+2. Fine tune the base **Llama-2-7b-chat-hf** model with the training data in Google Colab 
 3. Upload the fine tuned model to your Hugging Face repository
    
 **System Specifications: (Same as the previous exercise)**
