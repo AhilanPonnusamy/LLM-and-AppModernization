@@ -69,7 +69,7 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
 
  >[!NOTE]
  >If desired, replace the **model_id** with your Hugging Face repository details. If you use your repository you will not have the **tokenizer.model** file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the 
- >base model repository **NousResearch/Llama-2-7b-chat-hf**. Make sure tokenizer.model file is available in your Hugging Face repository before moving to the next step.
+ >base model repository **NousResearch/Llama-2-7b-chat-hf**. Make sure tokenizer.model file is available in your Hugging Face repository and your local download **XBCllama-hf** before moving to the next step.
 
 3. Install llama.cpp if it is not done already
 
