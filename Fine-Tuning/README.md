@@ -110,7 +110,7 @@ Sample output shown below..
 ```
 
 4. Try various prompts from the main folder README file. You will see the responses are much more aligned with the context with less hallucination and warning messages.
->![App UI](./images/Finetuned-output.png)  
+>![App UI](../images/Finetuned-output.png)  
    
 ***Have fun!!!!!***
 
