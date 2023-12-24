@@ -97,5 +97,20 @@ Sample output shown below..
 
 ![Colab UI](../images/finetuned-chat.png) 
 
+## STEP 3: Integrate with XBC Streamlit app
+
+1. Move the fine tuned model **llama-2-7b-xbcfinetuned-q8_0-gguf** to LLM-UI/models folder and rename it to **llama-2-7b-xbcfinetuned-q8_0-gguf.bin**.
+
+2. Get the **app-ft.py** file from the github repository. This file uses the fine tuned model and does not include the post processing hack to adress base model issues as explained in the previous lab.
+
+3. Start the LLM app
+
+```
+     streamlit run app-ty.py
+```
+
+4. Try various prompts from the main folder README file. You will see the responses are much more aligned with the context with less hallucination and warning messages.
+>![App UI](./images/Finetuned-output.png)  
+   
 ***Have fun!!!!!***
 
