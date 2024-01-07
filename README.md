@@ -47,7 +47,7 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 
 6. Create a new folder named 'models'
    
-7. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**.
+7. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**. Please add .bin as file extension to make sure that the model is properly loaded by the application.
 
 8. Move back to LLM-and-AppModernization folder
 
