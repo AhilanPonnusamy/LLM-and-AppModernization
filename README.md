@@ -13,6 +13,8 @@ This guide provides instructions for configuring and running Llama2, with steps 
 - RAM: 32 GB 2667 MHz DDR4
 - [Windows alternative specifications]
 
+---
+
 ### Prerequisites
 
 Before starting, ensure you have the necessary tools and environments set up:
@@ -75,6 +77,8 @@ ls -l models/llama-2-7b-chat.Q5_K_M.gguf
 
 Ensure that the file is correctly downloaded by checking its presence in the `models` directory with the `ls -l` command.
 
+---
+
 ### Running the Application
 
 Once the above steps are successfully completed, follow these steps to start and run the LLM-and-AppModernization application:
@@ -111,6 +115,8 @@ This command will launch the application's user interface, typically in your def
 
 12. **Access the Application:** After running the above command, Streamlit should automatically open the application in your web browser. If it doesn't, you can manually access it by navigating to the URL provided in the terminal output (usually `http://localhost:8501`).
 
+---
+
 ### Troubleshooting
 
 Here are some tips to help you resolve potential problems:
@@ -130,6 +136,8 @@ Here are some tips to help you resolve potential problems:
   - **Solution:** To fix this, you need to clear the existing conversation data to reduce the token count. Click on the 'Clear Conversation' button located on the left side of the UI. This will reset the conversation and allow you to continue without exceeding the token limit.
 
 In case these solutions do not resolve your issues, consider checking the application logs for more detailed error messages or reaching out to the support community for further assistance.
+
+---
 
 ### Testing
 
