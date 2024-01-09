@@ -12,7 +12,6 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.prompts import PromptTemplate
 import streamlit as st
 import requests
-import json
 
 PROMPT_TEMPLATE = """
 Use the following pieces of context enclosed by triple backquotes to answer the question at the end.
@@ -53,7 +52,7 @@ def select_llm() -> Union[ChatOpenAI, LlamaCpp]:
     #                              ("gpt-3.5-turbo-0613", "gpt-4",
     #                               "llama-2-7b-chat.Q5_K_M.gguf"))
 
-    
+
     # I am going to leave the temperature above mid range for better creativity - Removed slider - Ahilan 12/12
     temperature=0.0 # settting it to zero to get concerete answers with less maninupulation - Ahilan 12/17
     #temperature = st.sidebar.slider("Temperature:", min_value=0.0,
@@ -65,7 +64,7 @@ def select_llm() -> Union[ChatOpenAI, LlamaCpp]:
     elif model_name.startswith("llama-2-"):
         callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
         return LlamaCpp(
-            model_path=f"./models/{model_name}.bin",
+            model_path=f"./models/{model_name}",
             input={"temperature": temperature,
                    "max_length": 2000,
                    "top_p": 1
@@ -152,14 +151,14 @@ def extract_userquesion_part_only(content):
     return content
 
 def process_llm_output(rest_response,llm_response) -> str:
-   
+
     processed_output=''
     if((llm_response.upper().find('HOWEVER') > -1) or (llm_response.upper().find('JUST AN AI') > -1) or (llm_response.upper().find('PROPER AUTHORIZATION') > -1) or (llm_response.upper().find('CONSENT') > -1) or
-     (llm_response.upper().find('ETHICAL') > -1) or (llm_response.upper().find('SECURITY') > -1) or (llm_response.upper().find('CAN YOU') > -1) or (llm_response.upper().find('PLEASE PROVIDE') > -1)): 
+     (llm_response.upper().find('ETHICAL') > -1) or (llm_response.upper().find('SECURITY') > -1) or (llm_response.upper().find('CAN YOU') > -1) or (llm_response.upper().find('PLEASE PROVIDE') > -1)):
         processed_output=f'{rest_response} \n Hope I have fulfilled your request. Is there anything else I can do for you?'
     else:
         processed_output=f'{llm_response} \n Hope I have fulfilled your request. Is there anything else I can do for you?'
-  
+
     return processed_output
 
 def main() -> None:
@@ -173,7 +172,7 @@ def main() -> None:
     # Supervise user input
     text_context=''
     if user_input := st.chat_input("Input your question!"):
-        
+
         if(with_rag):
             #call account services
             accountservices_url = f'http://127.0.0.1:5000/processuserpmt?prompt={user_input}'
@@ -187,7 +186,7 @@ def main() -> None:
                     context=text_context, question=user_input)
             st.session_state.messages.append(HumanMessage(content=user_input_w_context))
 
-        else: 
+        else:
             st.session_state.messages.append(HumanMessage(content=user_input))
 
         with st.spinner("AI Assistant is typing ..."):
@@ -196,7 +195,7 @@ def main() -> None:
             revised_answer=process_llm_output(text_context,answer)
         else:
             revised_answer=answer
-       
+
         st.session_state.messages.append(AIMessage(content=revised_answer))
         st.session_state.costs.append(cost)
 
@@ -209,7 +208,7 @@ def main() -> None:
         elif isinstance(message, HumanMessage):
             with st.chat_message("user"):
                 st.markdown(extract_userquesion_part_only(message.content))
-    # Removed cost display from sidebar leaving the cost calculation for future reference - Ahilan 12/12/23 
+    # Removed cost display from sidebar leaving the cost calculation for future reference - Ahilan 12/12/23
     #costs = st.session_state.get("costs", [])
     #st.sidebar.markdown("## Costs")
     #st.sidebar.markdown(f"**Total cost: ${sum(costs):.5f}**")

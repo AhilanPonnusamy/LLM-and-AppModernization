@@ -1,88 +1,161 @@
-# LLM-and-AppModerization
+# LLM-and-AppModernization
 
-## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87) ##
+Large Language Models (LLMs) are transforming the way we interact with software applications. This project, demonstrates how AI can modernize application interfaces.
 
-This comprehensive guide provides step-by-step instructions for configuring and running Llama2 on a MacBook. While tailored for macOS, the instructions are adaptable for Windows machines as well. 
-The following is the sysem specification that I used for building this project, I do believe a lower configuration will work just fine.
+For a detailed explanation of this proof of concept (POC), check out my [blog post](https://medium.com/@ahilanp/part-ii-poc-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-ff0c1e8efb87).
 
-**System Specifications:**
+This guide provides instructions for configuring and running Llama2, with steps tailored for macOS but adaptable for Windows.
 
-- Device: MacBook Pro
+## System Specifications
+
+- Device: MacBook Pro (Tested on macOS Monterey 12.3.1)
 - Processor: 2.6 GHz 6-Core Intel Core i7
 - RAM: 32 GB 2667 MHz DDR4
+- [Windows alternative specifications]
 
-Follow the outlined steps to seamlessly set up Llama2 on your local environment. You may be able to follow the instruction for both Mac or Windows machine.
+---
 
-## Prerequisites
+### Prerequisites
 
-1.  Install Python if it is not already installed. You need Python version 3.8 or higher. I am currently running version 3.11.6
-   
-  ```
-      brew install python
+Before starting, ensure you have the necessary tools and environments set up:
+
+1. **Install Homebrew**: Homebrew is a package manager that simplifies the installation of software on macOS. To install, run:
+
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-2. upgrade pip3 to the latest version (pip3 enables the installation and management of third party software packages that are used in this project)
+2. **Install Python and Tools:** This project requires Python 3.8 or higher. Install Python along with `wget` and `git` using Homebrew:
 
-  ```
-      python3 -m pip install --upgrade pip
-  ```
-
-3. Download this code repository (install git if it is not already setup, You can also downlod the zip file directly from the main page under code option as an alternate)
-
-```
-      brew install git
-      git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
+```bash
+brew install python wget git
 ```
 
-4. Move to LLM-and-AppModernization folder
+**Note:** Windows users can download Python from the official Python website.
 
-```
-      cd LLM-and-AppModernization
-```
+3. **Upgrade pip3 and Install virtualenv:** pip3 is a package manager for Python. Upgrade it to the latest version and install virtualenv for creating isolated Python environments:
 
-5. Install all required packages from requirements.txt file
-```
-      python3 -m pip install -r requirements.txt
+```bash
+python3 -m pip install --upgrade pip
+pip install virtualenv
 ```
 
-6. Create a new folder named 'models'
-   
-7. From the 'models' folder download 'llama-2-7b-chat.Q5_K_M.gguf.bin' file from **https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main**. Please add .bin as file extension to make sure that the model is properly loaded by the application.
+By following these steps, you'll have all the necessary tools and environments configured to begin working with the LLM-and-AppModernization project.
 
-8. Move back to LLM-and-AppModernization folder
+### Installation and Setup
 
-9. Start the backend business services
+4. **Clone the Repository:** Download the project code by cloning the repository and navigate to the `LLM-and-AppModernization` directory:
+
+```bash
+git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
+cd LLM-and-AppModernization
 ```
-      python3 restservice.py
-```
-10. Open a new terminal window and from the LLM-and-AppModernization folder start the LLM application. It will open the UI in a new browser tab.
-```
-     streamlit run app.py
-```
->[!NOTE]
->During startup, you may face random errors sometime about llm not loaded or broken chain etc. Restart the app in such case which will fix the problem. You may also get light theme for UI as default, you can change in under setting in the top right corner.
->![App UI](./images/LLMUI.jpg)    
 
-## Testing
+5. **Set Up a Virtual Environment:** To avoid conflicts with other Python projects, it's recommended to use a virtual environment. Create and activate a virtual environment named `llm_env`:
 
-Now, that the application and the backend services are up and running, it is now time to take it for a spin
+```bash
+python3 -m venv llm_env
+source llm_env/bin/activate
+```
 
-1. With **Use RAG** option unselected, submit the following question **can you transfer $50 to joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI as shown below.
+This will isolate your project's dependencies from your global Python environment.
+
+6. **Install Required Packages:** The `requirements.txt` file lists all the Python packages needed for this project. Install them using the following command:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+This ensures that you have all the necessary libraries and tools installed.
+
+7. **Download the Llama Model:** Download the `llama-2-7b-chat.Q5_K_M.gguf` file it into the `models` directory:
+
+```bash
+wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q5_K_M.gguf -O models/llama-2-7b-chat.Q5_K_M.gguf
+ls -l models/llama-2-7b-chat.Q5_K_M.gguf
+```
+
+Ensure that the file is correctly downloaded by checking its presence in the `models` directory with the `ls -l` command.
+
+---
+
+### Running the Application
+
+Once the above steps are successfully completed, follow these steps to start and run the LLM-and-AppModernization application:
+
+8. **Start the Backend Service:** First, you need to start the backend service which powers the application. This service manages the interactions with the Llama model. Make sure you are in the root directory of the project (`LLM-and-AppModernization`), then start the service using:
+
+```bash
+python3 restservice.py
+```
+
+Keep this terminal open as the service must continue running for the application to function.
+
+9. **Open a New Terminal:** Now, open a new terminal window. This is necessary because you'll run the frontend part of the application while the backend service is still running.
+
+10. **Activate the Virtual Environment (Again):** In the new terminal, navigate back to the project directory if you're not already there:
+
+```bash
+cd path/to/LLM-and-AppModernization
+```
+
+Reactivate the virtual environment `llm_env`:
+
+```bash
+source llm_env/bin/activate
+```
+
+11. **Run the Application:** With the virtual environment active, start the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+This command will launch the application's user interface, typically in your default web browser.
+
+12. **Access the Application:** After running the above command, Streamlit should automatically open the application in your web browser. If it doesn't, you can manually access it by navigating to the URL provided in the terminal output (usually `http://localhost:8501`).
+
+---
+
+### Troubleshooting
+
+Here are some tips to help you resolve potential problems:
+
+#### Common Startup Errors
+
+- **Issue:** Random errors during startup, such as `llm not loaded` or `broken chain`.
+  - **Solution:** These errors usually occur due to temporary glitches. Simply restart the application to resolve these issues. If the problem persists, ensure all dependencies are correctly installed and that the backend service is running properly.
+
+- **Issue:** The user interface (UI) starts with a light theme by default.
+  - **Solution:** If you prefer a different theme, you can easily change it. Click on the settings icon in the top right corner of the UI and select your preferred theme. See the screenshot below for reference:
+    ![App UI](./images/LLMUI.jpg)
+
+#### Context Window Size Error
+
+- **Issue:** You might encounter a `ValueError` related to the context window size, such as `ValueError: Requested tokens (613) exceed context window of 512`. This error occurs when the request to the model exceeds the maximum token limit it can process.
+  - **Solution:** To fix this, you need to clear the existing conversation data to reduce the token count. Click on the 'Clear Conversation' button located on the left side of the UI. This will reset the conversation and allow you to continue without exceeding the token limit.
+
+In case these solutions do not resolve your issues, consider checking the application logs for more detailed error messages or reaching out to the support community for further assistance.
+
+---
+
+### Testing
+
+Now, that the application and the backend services are up and running, it is now time to take it for a spin.
+
+1. With **Use RAG** option unselected, submit the following question **Can you transfer $50 to Joseph?**. Once submitted, you will see some activity in streamlit console and in about 45 seconds a generic LLM response is dislayed in the UI as shown below.
 ![App UI](./images/WithoutRAG.jpg)
 
-2. With **Use RAG** option selected, submit the same question **can you transfer $50 to joseph?** you will now see a more context aware message as shown below
-![App UI](./images/WithRAG.jpg)    
+2. With **Use RAG** option selected, submit the same question **Can you transfer $50 to Joseph?** you will now see a more context aware message as shown below
+![App UI](./images/WithRAG.jpg)
 
->[!WARNING]
->You may periodically face the following context window size error. Clik on the clear conversation button on the left side to flush the data and try again.
- 
-3. you can try the following prompts to try with **Use RAG** option selected
-     - can you transfer $50 to ram?
-     - can you transfer $580 to john?
-     - can you transfer $100 to peter?
-     - can you add joseph to my account?
-     - can you add allan to my account?
-     - can you remove john from my account?
-     - can you remove mark from my account?
-   
+3. You can try the following prompts to try with **Use RAG** option selected
+     - Can you transfer $50 to Ram?
+     - Can you transfer $580 to John?
+     - Can you transfer $100 to Peter?
+     - Can you add Joseph to my account?
+     - Can you add Allan to my account?
+     - Can you remove John from my account?
+     - Can you remove Mark from my account?
+
 ***Have fun!!!!!***
