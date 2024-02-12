@@ -41,6 +41,10 @@ Follow the outlined steps to seamlessly set up Llama2 on your local environment.
 ```
 
 5. Install all required packages from requirements.txt file
+If you run into issues (eg you might run on Fedora or have conflicting dependencies which lead to errors) please try the following:
+- remove all version locks in the requirements.txt
+- create a virtual python environment (``` pip install virtualenv ```) and start again as per above from ```python3 -m pip install --upgrade pip```
+- check if your build tools like C++ and cmake is installed. If not install it via ``` dnf install g++ cmakre ```
 ```
       python3 -m pip install -r requirements.txt
 ```
