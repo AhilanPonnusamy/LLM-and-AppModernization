@@ -60,10 +60,10 @@ In this section, we will build GGUF format for the fine tuned Llama2 chat model 
      pip install huggingface_hub
 ```
 
-2. Fetch the HuggingFace model we stored in your Hugging Face account in STEP1
+2. Fetch the HuggingFace model we stored in your Hugging Face account in STEP1 from python prompt
 
 ```
-   from huggingface_hub snapshot_download
+   from huggingface_hub import snapshot_download
    
    model_id="AhilanPonnusamy/llama-2-7b-xbcfinetuned"
    snapshot_download(repo_id=model_id, local_dir="XBCllama-hf",
