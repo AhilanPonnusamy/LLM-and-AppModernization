@@ -1,5 +1,7 @@
 # Generative AI Quality and Risk Assessment Framework
 
+## Detailed explanation of this POC is provided in this [blog](https://medium.com/beyond-the-buzz-highlighting-the-impact-of-ai-in/part-v-last-mile-defense-for-genai-powered-business-solutions-75a4d0e42f09) ##
+
 ## Overview
 
 This repository contains code for a Generative AI Quality and Risk Assessment Framework. It integrates sentiment analysis, emotion detection, toxicity detection, and similarity scoring using pre-trained language models to evaluate the quality and risks associated with generated text.
