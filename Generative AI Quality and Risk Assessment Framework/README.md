@@ -19,7 +19,8 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
    cd LLM-and-AppModernization/Generative AI Quality and Risk Assessment Framework
 
 2. Install virtualenv
-  'pip install virtualenv
-   virtualenv myenv'
+   ```bash
+   pip install virtualenv
+   virtualenv myenv
 
 
