@@ -22,8 +22,12 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
    pip install virtualenv
    virtualenv myenv
 
-3. Activate the virtual environment
+3. Activate the virtual environment (use deactivate command to deactivate the virutalenv once done)
    ```bash
-   source myenv/bin/activate
+   source myenv/bin/activate 
 
+4. Install all dependencies from requirements.txt file
+   ```bash
+   pip3 install -r requirements.txt
 
+5. Start the 
