@@ -9,7 +9,6 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
 ### Prerequisites
 
 - Python 3.8+ installed
-- `virtualenv` installed globally
 
 ### Installation
 
@@ -22,5 +21,9 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
    ```bash
    pip install virtualenv
    virtualenv myenv
+
+3. Activate the virtual environment
+   ```bash
+   source myenv/bin/activate
 
 
