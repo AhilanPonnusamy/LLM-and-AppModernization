@@ -30,4 +30,14 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
    ```bash
    pip3 install -r requirements.txt
 
-5. Start the 
+5. Start the Analysis service
+   ```bash
+   python3 QualityAnalyzer.py
+
+6. Open a new terminal window and from the Generative AI Quality and Risk Assessment Framework folder and run the sample client application.
+   ```bash
+   python3 invokeAPI.py
+
+7. Quality Analysis summary will be displayed in the screen in JSon format
+
+***Have fun!!!!!*** 
