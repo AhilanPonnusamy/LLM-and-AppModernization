@@ -18,3 +18,8 @@ This repository contains code for a Generative AI Quality and Risk Assessment Fr
    git clone https://github.com/AhilanPonnusamy/LLM-and-AppModernization.git
    cd LLM-and-AppModernization/Generative AI Quality and Risk Assessment Framework
 
+2. Install virtualenv
+  'pip install virtualenv
+   virtualenv myenv'
+
+
