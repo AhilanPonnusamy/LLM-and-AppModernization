@@ -28,5 +28,6 @@ This POC shows how to leverage freeware(Llama 3.2) and open source(Granite 7b In
      ```
 4. The script will generate the code summary JSON file, code_summary.json, in the current folder.
 
-### Note: I have uploaded the output documentation files from both models for quarkus and node projects, code_summary_quarkus_llama8b.json, code_summary_node_llama8b.json and code_summary_quarkus_granite.json, code_summary_node_granite.json to this folder for your reference. For quarkus I used the super heros reference project available at https://github.com/quarkusio/quarkus-super-heroes.git
+## Note:
+I have uploaded the output documentation files from both models for quarkus and node projects, code_summary_quarkus_llama8b.json, code_summary_node_llama8b.json and code_summary_quarkus_granite.json, code_summary_node_granite.json to this folder for your reference. For quarkus I used the super heros reference project available at https://github.com/quarkusio/quarkus-super-heroes.git
 
