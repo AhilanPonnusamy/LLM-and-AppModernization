@@ -28,4 +28,4 @@ This POC shows how to leverage freeware(Llama 3.2) and open source(Granite 7b In
      ```
 4. The script will generate the project Markdown documentation file, DOCUMENTATION-granite.md, in the current folder.
 
-### Note: I have uploaded the output documentation files from both models, DOCUMENTATION-llama.md and DOCUMENTATION-granite.md, to this project for your reference. While the default outputs from both models are impressive, I find the Granite model's output to be crisper and of higher quality. The results can be further refined by enhancing the prompts and/or fine-tuning the models.
+### Note: I have uploaded the output documentation files from both models, DOCUMENTATION-llama.md and DOCUMENTATION-granite.md, to this project for your reference. While the default outputs from both models are impressive, I find the Granite model's output to be crisper and of higher quality. The results can be further refined by enhancing the prompts and/or fine-tuning the models. I have also uploaded output from llama 3.2 8b (Llama-3.2-8B-Instruct.Q5_K_S.gguf) moldel (DOCUMENTATION-llama8b.md) for your reference.
