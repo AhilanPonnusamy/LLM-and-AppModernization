@@ -10,7 +10,7 @@ This POC shows how to leverage open source(Granite 7b Instruct) LLMs to generate
      ```
       ilab model serve --model-path ../models/granite-7b-instruct.Q4_K_M.gguf
      ```
-3. Execute the documentation generation script by providing the GitHub project repository URL and the Granite 7b Instuct service URL as arguments.
+3. Execute the test cases generation script by providing the GitHub project repository URL and the Granite 7b Instuct service URL as arguments.
      ```
      python generate_tests.py https://github.com/nevenc/spring-music-k8s.git http://localhost:8000/v1/chat/completions
      ```
