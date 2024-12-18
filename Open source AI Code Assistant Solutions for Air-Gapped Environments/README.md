@@ -11,42 +11,44 @@ This POC shows how to leverage Granite code models for building an Open source A
    
 
 2. Once installed, you will see the continue.dev extension shown in the left side toolbar.
-```
-   from huggingface_hub import snapshot_download
-   
-   model_id="AhilanPonnusamy/llama-2-7b-xbcfinetuned"
-   snapshot_download(repo_id=model_id, local_dir="XBCllama-hf",
-                  local_dir_use_symlinks=False, revision="main")
-```
+>![VS_Code_Extension_Installed](../images/Extension_Installed.png) 
+
+## STEP 2: Download and Serve Granite code models for Chat and Code auto completion
+
+3. For this POC we will be using two Granite code models
+   1. granite-8b-code-instruct-128k.Q5_K_M.gguf model served by InstructLab for Chat.
+   2. granite-code:3b model served by ollama for code completion.
 
  >[!NOTE]
- >If desired, replace the **model_id** with your Hugging Face repository details. If you use your repository you will not have the **tokenizer.model** file which is required to build the GGUF format. You can either download it from **AhilanPonnusamy/llama-2-7b-xbcfinetuned** or from the 
- >base model repository **NousResearch/Llama-2-7b-chat-hf**. Make sure tokenizer.model file is available in your Hugging Face repository and your local download **XBCllama-hf** before moving to the next step.
+ >You can also use the same model for both chat and code completion if you like. If you decide to use the same model for both chat and code completion, use ollama for serving the model as vLLM serving option seem to have some issues with code completion.
 
-3. Install llama.cpp if it is not done already
-
+4. Download and serve the models in two different terminals as shown below
 ```
-  $ git clone https://github.com/ggerganov/llama.cpp.git
+  $ ilab model serve --model-path models/granite-8b-code-instruct-128k.Q5_K_M.gguf
 
-  $ pip install -r llama.cpp/requirements.txt
+  $ ollama run granite-code:3b
 ```
 
-4. Execute the converion script to build the GGUF model
+## STEP 3: Configure Chat and Code auto completion models in continue extension.  
+
+5. Select the Continue extension and click the Configure/Settings button located in the top-right corner of the Continue chat window. It will open the config.json file. 
+>![VS_Code_Extension_Configuration](../images/configure-continue.png) 
+
+6. Add the following chat model configuration under the models section. This will enable the extension to automatically detect the Granite 8B code model served by InstructLab.
 
 ```
-  $ python llama.cpp/convert.py XBCllama-hf \
-    --outfile llama-2-7b-xbcfinetuned-q8_0-gguf \
-    --outtype q8_0
+    {
+      "model": "AUTODETECT",
+      "title": "Autodetect",
+      "apiKey": "Empty",
+      "provider": "openai",
+      "apiBase": "http://localhost:8000/v1"
+    }
 ```
+ >[!NOTE]
+ >You can also use the 'Add Chat Model' option to add the model, as shown below. However, you'll still need to manually add the 'apiBase' property if you choose this approach.
 
-5. Test the model from llama.cpp folder
-
-```
- ./main -m ../llama-2-7b-xbcfinetuned-q8_0-gguf --color -ins -n -1
-```
-Sample output shown below..
-
->![App UI](../images/Finetuned-output.png)
+>![Configure_model](../images/add-chat-model-window.png)
 
 
 ## STEP 3: Integrate with XBC Streamlit app
