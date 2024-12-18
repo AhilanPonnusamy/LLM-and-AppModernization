@@ -50,22 +50,20 @@ This POC shows how to leverage Granite code models for building an Open source A
 
 >![Configure_model](../images/add-chat-model-window.png)
 
-
-## STEP 3: Integrate with XBC Streamlit app
-
-1. Move the fine tuned model **llama-2-7b-xbcfinetuned-q8_0-gguf** to LLM-UI/models folder and rename it to **llama-2-7b-xbcfinetuned-q8_0-gguf.bin**.
-
-2. Get the **app-ft.py** file from the github repository. This file uses the fine tuned model and does not include the post processing hack to adress base model issues as explained in the previous lab.
-
-3. Start the LLM app
+7. Configure the Code auto complete model comfiguration to connect to granite 3b model by updating the tabAutocompleteModel section as shown below.
 
 ```
-     streamlit run app-ty.py
+  "tabAutocompleteModel": {
+    "title": "granite-code-for-autocomplete",
+    "provider": "ollama",
+    "model": "granite-code:3b"
+  }
 ```
 
-4. Try various prompts from the main folder README file. You will see the responses are much more aligned with the context with less hallucination and warning messages.
->![App UI](../images/Finetuned-output.png)  
+8. Save the confituration changes.
    
-***Have fun!!!!!***
+9. Wait for a minute for the configuration changes to take effect. If necessary, restart the extension by disabling and re-enabling it to ensure the changes are applied.
+
+***Your code assistant is ready, Have fun!!!!!***
 
 
