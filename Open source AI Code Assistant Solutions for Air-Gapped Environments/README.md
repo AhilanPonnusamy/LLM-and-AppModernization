@@ -6,12 +6,9 @@ This POC shows how to leverage Granite code models for building an Open source A
 
 ## STEP 1: Install continue.dev VS Code Extension
 
-
-1.  In a new terminal, Install huggingface_hub library
+1. Install continue.dev extension in VS Code 
+>![VS_Code_Extension](../images/Extension.png)  
    
-```
-     pip install huggingface_hub
-```
 
 2. Fetch the HuggingFace model we stored in your Hugging Face account in STEP1 from python prompt
 
@@ -50,8 +47,8 @@ This POC shows how to leverage Granite code models for building an Open source A
 ```
 Sample output shown below..
 
+>![App UI](../images/Finetuned-output.png)
 
-![Colab UI](../images/finetuned-chat.png) 
 
 ## STEP 3: Integrate with XBC Streamlit app
 
