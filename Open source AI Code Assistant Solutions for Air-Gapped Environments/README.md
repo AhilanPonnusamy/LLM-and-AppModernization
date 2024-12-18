@@ -76,15 +76,12 @@ Follow this step-by-step guide to utilize the **Continue Extension** with the Gr
    - The model will appear as **“Autodetect-models/granite-8b…”**.
 
 
----
-
 ## 2. Create a Java Class for Unit Conversions
 1. In the chat window, enter the following prompt:  "Can you create a new Java program called ConvertUnits.java which contains methods to convert imperial to metric for all units?"
 2. The extension will generate the code and present the options: **Apply**, **Insert at Cursor**, and **Copy**.
 3. Create a new Java file in VS Code and press **Apply** to insert the generated code into the file.
 
 
----
 
 ## 3. Explore Auto-Completion Features
 ### 3.1 Add Class Comments
@@ -101,8 +98,6 @@ Follow this step-by-step guide to utilize the **Continue Extension** with the Gr
 - The auto-completion will suggest throwing an **IllegalArgumentException** with a valid error message.
 
 
----
-
 ## 4. Generate Documentation in Markdown
 1. In the chat window:
 - Ensure the Granite model is selected.
@@ -112,7 +107,6 @@ Follow this step-by-step guide to utilize the **Continue Extension** with the Gr
 4. Use the **Copy** button to save the response as a markdown file.
 
 
----
 
 ## 5. Generate Test Cases or Improve Code
 1. In the chat window, with the Granite model selected, set `ConvertUnits.java` in context using the **@** symbol.
@@ -127,18 +121,12 @@ Follow this step-by-step guide to utilize the **Continue Extension** with the Gr
   ```
 
 
----
 
 ## 6. Explore Additional Features
 The Continue Extension offers many other capabilities.  
 Refer to the **official documentation** to explore more features and maximize productivity.
 
 ---
-
-By following these steps, you can unlock the full potential of the Granite model and the Continue extension for enhanced Java development.
-
-
-   
 
 
 ***Your code assistant is ready, Have fun!!!!!***
