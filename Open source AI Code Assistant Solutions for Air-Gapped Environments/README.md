@@ -16,8 +16,8 @@ This POC shows how to leverage Granite code models for building an Open source A
 ## STEP 2: Download and Serve Granite code models for Chat and Code auto completion
 
 3. For this POC we will be using two Granite code models
-   1. granite-8b-code-instruct-128k.Q5_K_M.gguf model served by InstructLab for Chat.
-   2. granite-code:3b model served by ollama for code completion.
+   1. **granite-8b-code-instruct-128k.Q5_K_M.gguf** model served by InstructLab for Chat.
+   2. **granite-code:3b** model served by ollama for code completion.
 
  >[!NOTE]
  >You can also use the same model for both chat and code completion if you like. If you decide to use the same model for both chat and code completion, use ollama for serving the model as vLLM serving option seem to have some issues with code completion.
