@@ -7,11 +7,10 @@ This POC shows how to leverage Granite code models for building an Open source A
 ## STEP 1: Install continue.dev VS Code Extension
 
 1. Install continue.dev extension in VS Code 
->![VS_Code_Extension](../images/Extension.png)  
+>![VS_Code_Extension](../images/Extenion.png)  
    
 
-2. Fetch the HuggingFace model we stored in your Hugging Face account in STEP1 from python prompt
-
+2. Once installed, you will see the continue.dev extension shown in the left side toolbar.
 ```
    from huggingface_hub import snapshot_download
    
