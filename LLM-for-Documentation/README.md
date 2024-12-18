@@ -1,5 +1,7 @@
 # Generating project documentation with LLM
 
+## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/enhancing-stability-and-maintainability-of-legacy-apps-with-gen-ai-4e35bc382671) ##
+
 This POC shows how to leverage freeware(Llama 3.2) and open source(Granite 7b Instruct) LLMs to generate Markdown documentation for Java, .NET, and Node.js projects. We employ the Llama 3.2 3b and Granite 7b Instruct models to create detailed, structured documentation. The scripts are gernated by LLM with minor code edits and refinements.
 
 ## Generating Project Documentation Using the Llama 3.2 Model
