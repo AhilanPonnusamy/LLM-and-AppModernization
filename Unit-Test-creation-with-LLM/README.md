@@ -2,7 +2,7 @@
 
 ## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/enhancing-stability-and-maintainability-of-legacy-apps-with-gen-ai-4e35bc382671) ##
 
-This POC shows how to leverage open source(Granite 7b Instruct) LLMs to generate code summary for SpringBoot(Java) projects. We employ Granite 7b Instruct model to create unit tests for all the files in the project. The generated test files are stored under the test_generated folder.The generated test files can be used by developers as a gudeline to build unit tests for their code. The script is gernated by LLM with minor code edits and refinements.
+This POC shows how to leverage open source(Granite 7b Instruct) LLMs to generate unit tests for SpringBoot(Java) projects. We employ Granite 7b Instruct model to create unit tests for all the files in the project. The generated test files are stored under the test_generated folder.The generated test files can be used by developers as a gudeline to build unit tests for their code. The script is gernated by LLM with minor code edits and refinements.
 
    
 ## Generating Unit Tests Using the Granite 7b Instruct Model
