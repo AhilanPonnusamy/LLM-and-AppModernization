@@ -1,6 +1,6 @@
 # Open source AI Code Assistant for Air Gapped Deployment
 
-## Detailed explanation of this POC is provided in this [blog](https://medium.com/@ahilanp/part-iii-fine-tuning-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-74fb748d894b) ##
+## Detailed explanation of this POC is provided in this [blog]([https://medium.com/@ahilanp/part-iii-fine-tuning-beyond-the-buzz-highlighting-the-impact-of-ai-in-modernizing-application-74fb748d894b](https://medium.com/beyond-the-buzz-highlighting-the-impact-of-ai-in/open-source-ai-code-assistant-for-secure-disconnected-environments-with-ibm-granite-code-models-ed717c83266d)) ##
 
 This POC shows how to leverage Granite code models for building an Open source AI code assistant for secured and Air gapped environemts. It uses VS Code as the IDE and continue.dev extension as the AI Code assistant and IBM Granite code models for chat and auto completion. 
 
